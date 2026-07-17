@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "queuectl"
+version = "1.0.0"
+dependencies = [
+    "typer[all]>=0.9.0",
+]
+
+# Explicitly list all top-level Python files (without the .py extension)
+[tool.setuptools]
+py-modules = ["main", "cli", "config", "database", "models", "worker"]
+
+[project.scripts]
+queuectl = "main:app"
