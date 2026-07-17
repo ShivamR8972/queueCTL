@@ -16,5 +16,8 @@ cd queuectl
 python -m venv .venv
 .venv\Scripts\activate
 
+# Install the required libraries
+pip install -r requirements.txt
+
 # Install the application locally in editable state
-pip install -e . --force-reinstall
+pip install -e .
